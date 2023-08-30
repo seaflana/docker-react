@@ -7,3 +7,15 @@ before_install:
 
 script:
   - docker run -e CI=true seaflana/docker-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "docker web frontend flow"
+  env: "Dockerwebfrontendflow-env"
+  bucket_name: "elasticbeanstalk-us-east-1-163153320270"
+  bucket_path: "docker web frontend flow"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
