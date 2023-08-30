@@ -12,6 +12,7 @@ RUN npm run build
 
 # run phase
 FROM nginx
+EXPOSE 80
 # this copy statement essentially says that I want to copy over something from the builder phase, which was ran above
 # so it is saying, refer to the builder phase, take from the folder /app/build, and put the files in /usr/share/nginx/html (which is found on the docker hub nginx site)
 COPY --from=builder /home/node/app/build /usr/share/nginx/html
