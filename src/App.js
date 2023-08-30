@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hello Darkness My Old Friend...
+          Hey there Mom and Dad!
         </p>
         <a
           href="https://www.google.com"  // Replace with the URL you want to link to
